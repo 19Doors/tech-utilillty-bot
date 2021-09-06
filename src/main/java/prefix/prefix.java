@@ -5,7 +5,9 @@ import java.sql.SQLException;
 
 import database.DB;
 import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.ChannelType;
 import net.dv8tion.jda.api.entities.Guild;
+import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.events.guild.GuildJoinEvent;
 import net.dv8tion.jda.api.events.guild.GuildLeaveEvent;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
@@ -50,7 +52,7 @@ public class prefix extends ListenerAdapter {
     @Override
     public void onMessageReceived(MessageReceivedEvent event)
     {   
-        if(event.getMessage().getEmbeds().isEmpty())
+        if(event.getMessage().getEmbeds().isEmpty() && event.getMessage().isFromType(ChannelType.TEXT))
         {
             
 
