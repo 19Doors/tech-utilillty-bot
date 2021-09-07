@@ -49,14 +49,16 @@ public class kick extends ListenerAdapter{
                 eb.setFooter("Tech Utilities");
                 Color color = new Color(66,252,128);
                 eb.setColor(color);
-                event.getChannel().sendMessage(eb.build()).queue();
+                
 
                 try{
                     User user = event.getJDA().getUserById(id);
                     user.openPrivateChannel().queue(ok -> {
                         ok.sendMessage("You were kicked out from "+event.getGuild().getName()+". Reason: "+reason1).queue();
                     });
+                    
                     event.getGuild().kick(event.getGuild().getMemberById(id), reason).queue();
+                    event.getChannel().sendMessage(eb.build()).queue();
                 }catch(Exception e){
                     event.getChannel().sendMessage(new EmbedBuilder().setTitle("Moderation Commands").setDescription("That player does'nt exist!!").setColor(new Color(247, 45, 61)).setFooter("Tech Utilities").build()).queue();
                 }
@@ -82,14 +84,16 @@ public class kick extends ListenerAdapter{
                 eb.setFooter("Tech Utilities");
                 Color color = new Color(66,252,128);
                 eb.setColor(color);
-                event.getChannel().sendMessage(eb.build()).queue();
+                
 
                 try{
                     User user = event.getJDA().getUserById(id);
                     user.openPrivateChannel().queue(ok -> {
                         ok.sendMessage("You were kicked out from "+event.getGuild().getName()+". Reason: "+reason1).queue();
                     });
+                    
                     event.getGuild().kick(event.getGuild().getMemberById(id), reason).queue();
+                    event.getChannel().sendMessage(eb.build()).queue();
                 }catch(Exception e){
                     event.getChannel().sendMessage(new EmbedBuilder().setTitle("Moderation Commands").setDescription("That player does'nt exist!!").setColor(new Color(247, 45, 61)).setFooter("Tech Utilities").build()).queue();
                 }

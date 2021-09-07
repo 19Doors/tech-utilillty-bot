@@ -60,6 +60,7 @@ public class Comm{
         
         String content = event.getMessage().getContentStripped();
         //Check for prefix
+        try{
         if(Character.toString(content.charAt(0)).compareTo(prefixx)==0){
             if(wrds[0].substring(1).equalsIgnoreCase(name)){
                 if(wrds.length==1){
@@ -87,6 +88,8 @@ public class Comm{
         
     
     return false;
+        }catch(Exception e){return false;}
+
         }
     }
     
@@ -96,9 +99,11 @@ public class Comm{
         {
             return false;
         }else{
+
         String content = event.getMessage().getContentDisplay();
 
         //Check for prefix
+        try{
         if(Character.toString(content.charAt(0)).compareTo(prefixx)==0){
             
             if(wrds[0].substring(1).equalsIgnoreCase(name)){
@@ -136,6 +141,7 @@ public class Comm{
         }
 
         return false;
+    }catch(Exception e){return false;}
     }
     }
 
@@ -148,7 +154,7 @@ public class Comm{
         Message msg = event.getMessage();
         String content = msg.getContentStripped();
         
-
+        try{
         //Check for prefix
         if(Character.toString(wrds[0].charAt(0)).equals(prefixx)){
             if(wrds[0].substring(1).equalsIgnoreCase(name)){
@@ -175,6 +181,7 @@ public class Comm{
         }
 
         return false;
+    }catch(Exception e){return false;}
     }
 
     public boolean checkConditionNoArg(List<Permission> perms){
@@ -186,6 +193,8 @@ public class Comm{
 
         Message msg = event.getMessage();
         String content = msg.getContentStripped();
+
+        try{
         //Check for prefix
         if(Character.toString(wrds[0].charAt(0)).equals(prefixx)){
             if(wrds[0].substring(1).equalsIgnoreCase(name)){
@@ -223,9 +232,12 @@ public class Comm{
         }
 
         return false;
+    }catch(Exception e){return false;}
     }
 
-
-
-
 }
+
+
+
+
+    
