@@ -10,6 +10,7 @@ import moderation.autoRoleImpl;
 import moderation.clear;
 import moderation.createChannel;
 import moderation.deleteChannel;
+import moderation.kick;
 import moderation.slowmode;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -38,6 +39,7 @@ public class Main {
                                 new slowmode(),
                                 new autoRole(),
                                 new autoRoleImpl(),
+                                new kick(),
                                 
                                 //General
                                 new ping(),
