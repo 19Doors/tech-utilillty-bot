@@ -12,6 +12,8 @@ import moderation.createChannel;
 import moderation.deleteChannel;
 import moderation.kick;
 import moderation.slowmode;
+import moderation.mute.mute;
+import moderation.mute.unmute;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.requests.GatewayIntent;
@@ -40,6 +42,8 @@ public class Main {
                                 new autoRole(),
                                 new autoRoleImpl(),
                                 new kick(),
+                                new mute(),
+                                new unmute(),
                                 
                                 //General
                                 new ping(),
