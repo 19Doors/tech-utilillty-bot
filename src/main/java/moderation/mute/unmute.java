@@ -20,7 +20,7 @@ public class unmute extends ListenerAdapter {
             String al[] = {"unmute"};
             List<Permission> ls = new ArrayList<Permission>();
             ls.add(Permission.KICK_MEMBERS);
-            Comm com = new Comm("unmute", al, "It will mute people", event);
+            Comm com = new Comm("unmute", al, "It will unmute people", event);
             if(com.checkCondition(ls))
             {
                 Message msg = event.getMessage();
