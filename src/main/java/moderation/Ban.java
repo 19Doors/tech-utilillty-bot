@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import CommandManager.Comm;
+import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Message;
@@ -21,6 +22,8 @@ public class Ban extends ListenerAdapter {
         ls.add(Permission.BAN_MEMBERS);
         if(com.checkCondition(ls))
         {
+            String id = "";
+            EmbedBuilder wrngCmd = new EmbedBuilder();
             
         }
     }
