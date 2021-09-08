@@ -17,7 +17,6 @@ public class race extends ListenerAdapter {
         String al[] = {"reactionRace"};
         Comm com = new Comm("race", al, "This is for conduction reaction race", event);
         if(com.checkConditionNoArg()){
-            cmdhelp c = new cmdhelp();
             event.getChannel().sendMessage("React here!!").queue(react12 -> {
                 if(react12.getEmotes().isEmpty()) {
                     react12.getJDA().addEventListener(new racereactionmsg(react12));

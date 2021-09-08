@@ -5,6 +5,7 @@ import fun.race;
 import general.botInvite;
 import general.infoBot;
 import general.ping;
+import moderation.Ban;
 import moderation.autoRole;
 import moderation.autoRoleImpl;
 import moderation.clear;
@@ -12,10 +13,9 @@ import moderation.createChannel;
 import moderation.deleteChannel;
 import moderation.kick;
 import moderation.slowmode;
+import moderation.unban;
 import moderation.mute.mute;
 import moderation.mute.unmute;
-import net.dv8tion.jda.api.JDA;
-import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder;
 import net.dv8tion.jda.api.utils.MemberCachePolicy;
@@ -44,6 +44,8 @@ public class Main {
                                 new kick(),
                                 new mute(),
                                 new unmute(),
+                                new Ban(),
+                                new unban(),
                                 
                                 //General
                                 new ping(),
