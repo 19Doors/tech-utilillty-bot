@@ -23,7 +23,7 @@ import prefix.prefix;
 
 public class Main {
     public static void main(String[] args) throws LoginException{
-        DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault("ODc1MDE5NTk3ODE5MDMxNTgy.YRPbgQ.lC86f8j4dgXirhxQShGJmLgkfR4")
+        DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault("ODk4NDQyNzk2ODY2ODc5NTEw.YWkSDw.OhLrQ8OksYMZD_qUh0fGy3moV7E")
                                                 .setMemberCachePolicy(MemberCachePolicy.ALL)
                                                 .enableIntents(GatewayIntent.GUILD_MEMBERS)
                                                 .enableIntents(GatewayIntent.GUILD_MESSAGES)
