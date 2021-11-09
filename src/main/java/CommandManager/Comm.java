@@ -2,13 +2,9 @@ package CommandManager;
 
 import java.util.List;
 
-import com.jagrosh.jdautilities.commons.waiter.EventWaiter;
-
 import net.dv8tion.jda.api.Permission;
-import net.dv8tion.jda.api.entities.ChannelType;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
-import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import prefix.prefix;
 import userinfo.userPerms;
 
